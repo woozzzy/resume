@@ -1,0 +1,221 @@
+%-------------------------
+% Latex based Resume
+% Author : Sunwoo Park
+% Based off of: https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{fontawesome5}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% % serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{5pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%----------------------------------------------------------
+%--------------------RESUME STARTS HERE--------------------
+%----------------------------------------------------------
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\huge Sunwoo Park} \\ \vspace{2pt}
+    \small \faPhone*\;(732) 354-6764 $|$ 
+    \href{mailto:sunwoo.park@gmail.com}{\faEnvelope\;sunwoo.park@gmail.com} $|$ 
+    \href{https://linkedin.com/in/spark0203}{\faLinkedin\;linkedin.com/in/spark0203} $|$
+    \href{https://github.com/woozzzy}{\faGithub\;github.com/woozzzy} 
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Bachelor of Science in Computer Science -- GPA: 3.8/4.0 (Highest Honors)}{Aug. 2021 -- Dec. 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Artificial Intelligence Innovations Intern}{June 2023 -- May 2024}
+      {Delta Air Lines}{Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Fine-tuned several W2V-BERT 2.0 models for per-language speech-to-text across 7 primary languages, halving inference latency on existing development hardware and cutting server inference costs by an estimated 30\%.}
+        \resumeItem{Developed offline and on-device speech transcription and translation pipeline resulting in 6x speed up when processing real-time audio by integrating OpenAI's Whisper and Google's ML Kit models on CoreML and Swift.}
+        \resumeItem{Performed technical evaluations on state-of-the-art sensor technologies from several startups to optimize aircraft de-icing processes, potentially resulting in multi-billion dollar annual savings industry-wide.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Full Stack Developer Intern}{Nov. 2022 -- Jan. 2023}
+      {Eachday}{Pittsburgh, PA (Remote)}
+      \resumeItemListStart
+        \resumeItem{Developed mobile application in Flutter from Figma wireframes, working closely with the design team to prioritize and scope 15 core features for the initial product launch.}
+        \resumeItem{Architected a serverless backend in AWS (S3, Glue, Athena, Grafana) that supported big data analytics for an estimated 1,000 daily users, leading to a 30\% reduction in operational costs and a 2x increase in processing speeds.}
+        % \resumeItem{Collaborated closely with medical and buisness teams to organize product sprint cadences to meet critical conference and investor deadlines.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research \& Development Intern}{May 2022 -- July 2022}
+      {Pentabreed}{Seoul, South Korea}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed a full-stack MERN application for automated NFT art generation and batch minting across multiple blockchains for up to 10,000 NFTs as a part of the blockchain R\&D team.}
+        % \resumeItem{Designed and implemented custom Solidity contracts, more than halving gas costs when bulk minting.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+  
+%-----------Research-----------
+\section{Research}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Student Researcher for "Accelerating Materials Discovery with AI" Project}{Jan. 2024 -- Dec. 2024}
+      {Georgia Tech VIP Program in collaboration with Fung Group}{Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Researched the use of diffusion crystal structure prediction models in a novel active learning framework to generate atomic structures from spectroscopic data, yielding successful results for simple molecules.}
+        \resumeItem{Performed batch hyperparameter search on the Equiformers-v2 model for increased performance on the QM9 challenge for material science discovery, achieving 48\% decrease in test error from base parameters.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Student Researcher for "FishStalkers" Project}{Jan. 2023 -- May 2023}
+      {Georgia Tech VIP Program in collaboration with McGrath Lab}{Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Trained and fine-tuned a YOLOv5 OBB model on a bespoke dataset of Lake Malawi cichilids to autonomously track the mating behavior improving precision, recall, and F1 scores by over 150\%.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{TagLalwizyan: POS Tagging for Endangered Creole} $|$ \emph{Python, PyTorch, HuggingFace}}{Dec. 2024}
+      \resumeItemListStart
+        \resumeItem{Annotated a dataset of over 200 sentences whilst developing a novel tagset tailored to the unique grammatical features of the critically endangered Louisiana Creole.}
+        \resumeItem{Performed statistical evaluations of three POS tagging approaches (bidirectional LSTM, fine-tuned BERT, and transfer learning with CamemBERT), establishing a baseline for future NLP research regarding Louisiana Creole and highlighting the potential of transfer learning in low-resource languages.}
+      \resumeItemListEnd
+    
+    \resumeProjectHeading
+      {\textbf{In-Context Learning with Context Distillation on Llama3} $|$ \emph{Python, PyTorch, HuggingFace}}{May 2024}
+      \resumeItemListStart
+        \resumeItem{Evaluted the use of In-Context Learning alongside Context Distillation as a means of improving a text summarization task without expensive fine-tuning, achieving marginal but promising improvements in ROUGE metrics.}
+      \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %     {\textbf{HackGT 9: AI Music Visualizer (Track Winner)} $|$ \emph{Python, FastAPI, React, FFmpeg}}{Oct. 2022}
+    %     \resumeItemListStart
+    %       \resumeItem{Utilized lyric transcriptions, generated by OpenAI's Whisper model from a single audio file, as prompts for Stable Diffusion v1.5 in a frame-by-frame video generation framework that is encapsulated within a simple webapp.}
+    %     \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, JavaScript ES6, TypeScript, HTML/CSS, Dart, Swift, C/C++, Bash} \\
+     \textbf{Frameworks}{: React, Node.js, Express, TailwindCSS, CoreML, Flutter, SwiftUI, FastAPI} \\
+     \textbf{Developer Tools}{: Git, VSCode, Postman, AWS, Vim/NeoVim, Linux (Arch or Debian-based), Slurm, Nginx, Figma} \\
+     \textbf{Libraries}{: PyTorch, HuggingFace, Pandas, NumPy, Matplotlib, Coqui TTS}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
