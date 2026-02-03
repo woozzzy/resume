@@ -1,3 +1,3 @@
-# resume
+# My Resume
 
-![Resume Preview](resume1.jpg)
+![Resume Preview](Sunwoo_Park_Resume.jpg)
